@@ -1,0 +1,89 @@
+{
+    "title": "Deep Art Effects",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/deeparteffects.com/2017-02-10T162446Z/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.deeparteffects.com/v1",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "api_key": {
+                "label": "x-api-key (api_key)",
+                "viewClass": "TextFieldView"
+            },
+            "sigv4": {
+                "label": "Authorization (sigv4)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_noauth_result": {
+            "main": "./lib/actions/get_noauth_result.js",
+            "title": "get_noauth_result",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_noauth_result.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_noauth_styles": {
+            "main": "./lib/actions/get_noauth_styles.js",
+            "title": "get_noauth_styles",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_noauth_styles.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_noauth_upload": {
+            "main": "./lib/actions/post_noauth_upload.js",
+            "title": "post_noauth_upload",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_noauth_upload.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "imageBase64Encoded": {
+                    "description": "Base64 decoded image",
+                    "type": "string"
+                },
+                "imageSize": {
+                    "description": "Image size in px. Picture will be resized for processing.",
+                    "type": "integer"
+                },
+                "optimizeForPrint": {
+                    "description": "Use this flag to get an artwork optimized for print.",
+                    "type": "boolean"
+                },
+                "partnerId": {
+                    "description": "The unique identifier for a partner with dedicated api access.",
+                    "type": "string"
+                },
+                "styleId": {
+                    "description": "The unique identifier for a style",
+                    "type": "string"
+                },
+                "useOriginalColors": {
+                    "description": "Use this flag to use the original color from your photo for the artwork.",
+                    "type": "boolean"
+                }
+            },
+            "title": "Request schema for a submission",
+            "type": "object"
+        }
+    }
+}

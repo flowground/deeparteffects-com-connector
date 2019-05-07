@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "submissionId": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
